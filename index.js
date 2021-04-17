@@ -1,9 +1,9 @@
 /**
  * 
  * @param {Boolean} minified 
- * @returns {String}
+ * @returns {String} A random id in the format YYYYDDMM{BASE36}
  */
-exports.uniqueId = function (minified = false){
+function uniqueId(minified = false){
   const _char = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const _Date = new Date();
   const _year = _Date.getFullYear();
@@ -28,9 +28,11 @@ exports.uniqueId = function (minified = false){
     return [
       parseInt(_idArr.join('')).toString(36).toUpperCase(),
       _randomId36()
-    ].join('');
+    ].join('')
   } return [
     _idArr.join(''),
     _randomId36()
-  ].join('');
+  ].join('')
 }
+
+export default uniqueId;
