@@ -3,7 +3,7 @@
  * @param {Boolean} minified 
  * @returns {String}
  */
-function uniqueId(minified = false){
+exports.uniqueId = function (minified = false){
   const _char = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const _Date = new Date();
   const _year = _Date.getFullYear();
@@ -34,5 +34,3 @@ function uniqueId(minified = false){
     _randomId36()
   ].join('');
 }
-
-module.exports = uniqueId;
