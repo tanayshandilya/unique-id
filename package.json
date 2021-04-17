@@ -1,0 +1,26 @@
+{
+  "name": "unique-id",
+  "version": "1.0.0",
+  "description": "Simple unique ID based on date.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanayshandilya/unique-id.git"
+  },
+  "keywords": [
+    "unique",
+    "id",
+    "uuid",
+    "random",
+    "date"
+  ],
+  "author": "Tanay Shandilya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tanayshandilya/unique-id/issues"
+  },
+  "homepage": "https://github.com/tanayshandilya/unique-id#readme"
+}
