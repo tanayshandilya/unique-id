@@ -1,5 +1,5 @@
 {
-  "name": "unique-id",
+  "name": "@tanayshandilya/unique-id",
   "version": "1.0.0",
   "description": "Simple unique ID based on date.",
   "main": "index.js",

@@ -3,7 +3,7 @@ A simple date based unique id package.
 
 ## How to install
 ```shell
-npm i unique-id
+npm i @tanayshandilya/unique-id
 ```
 
 ## How to use
