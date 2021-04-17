@@ -5,13 +5,23 @@ A simple date based unique id package.
 ```shell
 npm i @tanayshandilya/unique-id
 ```
+```shell
+yarn add @tanayshandilya/unique-id
+```
 
 ## How to use
 ```JavaScript
 const uniqueId = require('unique-id');
-const randomId = uniqueId(); // 20210306224063LEXJ9S
+const id = uniqueId(); // 20210306224063LEXJ9S
+
+// or
+import uniqueId from '@tanayshandilya/unique-id';
+const id = uniqueId();
+
+// using minified mode
+const id = uniqueId(true); // 2KUFLTFLAHTKN4MD 
 ```
-# Id components
+## Id components
 
 ```
 YYYY-MM-DD-HH-MM-{BASE36}
