@@ -35,8 +35,12 @@
   ].join('');
 }
 
-if( typeof module === 'undefined' ){
-  export default uniqueId;
-}else{
+if (typeof define === "function" && define.amd) {
+  define(() => {
+    return uniqueId;
+  });
+} else if (typeof exports === "object") {
   module.exports = uniqueId;
+} else {
+  global.dateFormat = uniqueId;
 }
