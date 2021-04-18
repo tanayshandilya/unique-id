@@ -35,4 +35,8 @@
   ].join('');
 }
 
-export default uniqueId;
+if( typeof module === 'undefined' ){
+  export default uniqueId;
+}else{
+  module.exports = uniqueId;
+}
