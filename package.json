@@ -1,6 +1,6 @@
 {
   "name": "@tanayshandilya/unique-id",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Simple unique ID based on date.",
   "main": "index.js",
   "types": "index.d.ts",
