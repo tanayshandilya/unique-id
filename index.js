@@ -42,5 +42,5 @@ if (typeof define === "function" && define.amd) {
 } else if (typeof exports === "object") {
   module.exports = uniqueId;
 } else {
-  global.dateFormat = uniqueId;
+  global.uniqueId = uniqueId;
 }
