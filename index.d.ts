@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {Boolean} minified
+ * @returns {String} Returns a simple string id in the format YYYYDDMMHHii{Base36}
+ */
 declare function uniqueId(minified: boolean = false): string {
   declare const _char: string = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   declare const _Date: Date = new Date();
