@@ -3,7 +3,7 @@
  * @param {Boolean} minified
  * @returns {String} Returns a simple string id in the format YYYYDDMMHHii{Base36}
  */
- function uniqueId(minified = false) {
+ function dateId(minified = false) {
   const _char = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const _Date = new Date();
   const _year = _Date.getFullYear();
@@ -35,12 +35,50 @@
   ].join('');
 }
 
+/**
+ * 
+ * @param {Number} length 
+ * @returns {String} Returns a random id consisting of [0-9][a-z][A-Z]
+ */
+function base62Id(length = 12){
+  let _char = '0123456789'; let _id = '';
+  _char += 'abcdefghijklmnopqrstuvwxyz';
+  _char += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  for (let i = 0; i < length; i++) {
+    _id += _char[Math.floor(Math.random() * _char.length)]    
+  }; return _id;
+}
+
+/**
+ * 
+ * @param {Number} length 
+ * @returns {String|Number} Returns integer id
+ */
+function intId(length = 12){
+  const _char = '0123456789'; let _id = '';
+  for (let i = 0; i < length; i++) {
+    _id += _char[Math.floor(Math.random() * _char.length)]    
+  }; return (parseInt(_id) <= Number.MAX_SAFE_INTEGER)  ? parseInt(_id): _id;
+}
+
 if (typeof define === "function" && define.amd) {
   define(() => {
-    return uniqueId;
+    return {
+      dateId,
+      base62Id,
+      intId
+    };
   });
 } else if (typeof exports === "object") {
-  module.exports = uniqueId;
+  module.exports = {
+    dateId,
+    base62Id,
+    intId
+  };
 } else {
-  global.uniqueId = uniqueId;
+  global.uniqueId = {
+    dateId,
+    base62Id,
+    intId
+  };
 }
