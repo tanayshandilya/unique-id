@@ -1,3 +1,4 @@
+(function(){
 /**
  * 
  * @param {Boolean} minified
@@ -61,16 +62,12 @@ function intId(length = 12){
   }; return (parseInt(_id) <= Number.MAX_SAFE_INTEGER)  ? parseInt(_id): _id;
 }
 
-try {
+if(typeof module !== undefined) {
   module.exports = {
     dateId,
-    base62Id,
-    intId
-  }
-} catch (error) {
-  export {
-    dateId,
-    base62Id,
-    intId
+    intId,
+    base62Id
   }
 }
+
+})();

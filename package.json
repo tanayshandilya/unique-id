@@ -1,11 +1,11 @@
 {
   "name": "@tanayshandilya/unique-id",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Simple unique ID based on date.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "node index.js"
+    "test": "node test/test-node.js"
   },
   "repository": {
     "type": "git",
