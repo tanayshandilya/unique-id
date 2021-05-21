@@ -61,24 +61,16 @@ function intId(length = 12){
   }; return (parseInt(_id) <= Number.MAX_SAFE_INTEGER)  ? parseInt(_id): _id;
 }
 
-if (typeof define === "function" && define.amd) {
-  define(() => {
-    return {
-      dateId,
-      base62Id,
-      intId
-    };
-  });
-} else if (typeof exports === "object") {
+try {
   module.exports = {
     dateId,
     base62Id,
     intId
-  };
-} else {
-  global.uniqueId = {
+  }
+} catch (error) {
+  export {
     dateId,
     base62Id,
     intId
-  };
+  }
 }
